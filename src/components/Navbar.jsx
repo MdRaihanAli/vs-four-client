@@ -25,7 +25,7 @@ function Navbar() {
                         <div>
 
                             <a className="ms-5 normal-case font-extrabold text-4xl">VS-4</a>
-                            <a className="mx-5 font-extrabold text-white text-4xl">STAFF STATUSS</a>
+                            <a className="mx-5 font-extrabold text-white text-4xl">STAFF STATUS</a>
                         </div>
                     </div>
                     <div className="navbar-end hidden lg:flex">
