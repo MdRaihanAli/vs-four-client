@@ -6,7 +6,6 @@ function Navbar() {
     const navItem = <>
         <li className='font-bold'><Link to='/'>All People</Link></li>
         <li className='font-bold'><Link to='addPeople'>Add People</Link></li>
-
     </>
 
 
