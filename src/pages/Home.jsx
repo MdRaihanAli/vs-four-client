@@ -75,7 +75,7 @@ function Home() {
 
                         {
                             peoples.map((person, index) => <tr key={person._id} className={`${dateCaculator(person.expire) > 0 ? 'bg-red-300' : 'bg-green-300'} font-bold rounded-sm gap-5 border-solid border-2 border-indigo-100`} >
-                                <td>{index}</td>
+                                <td>{index+1}</td>
                                 <td>
                                     <span className='font-bold text-xl'> {person.name}</span><br />
                                     <span className='text-slate-500'> {person.nationality}</span>
