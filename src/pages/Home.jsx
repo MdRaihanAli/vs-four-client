@@ -64,9 +64,9 @@ function Home() {
                             <td>Passport</td>
                             <td>Civil ID</td>
                             <td className='hidden md:block'>Visa Type</td>
-                            <td>Phone</td>
-                            <td>Start Date</td>
-                            <td className='hidden md:block'>Expire</td>
+                            <td >Phone</td>
+                            <td className='hidden md:block'>Start Date</td>
+                            <td >Expire</td>
                             <td>Visa Remaining</td>
 
                         </tr>
@@ -83,9 +83,9 @@ function Home() {
                                 <td>{person.passport}</td>
                                 <td>{person.sivilId}</td>
                                 <td className='hidden md:block'>{person?.visa}</td>
-                                <td>{person.phone}</td>
-                                <td>{person.startDate}</td>
-                                <td className='hidden md:block'>{person.expire}</td>
+                                <td >{person.phone}</td>
+                                <td className='hidden md:block'>{person.startDate}</td>
+                                <td >{person.expire}</td>
                                 <td className=''>
                                     <div className={`badge w-full text-xl p-4 font-bold ${dateCaculator(person.expire) > 0 ? 'badge-error' : 'badge-success'} gap-2`}>
                                         {dateCaculator(person.expire)}
