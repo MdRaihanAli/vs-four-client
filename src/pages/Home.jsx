@@ -48,25 +48,26 @@ function Home() {
         })
     }
 
-    
+
 
 
 
     return (
         <div className='max-w-7xl mx-auto md:p-5 p-1 '>
-           
+
             <div className="overflow-x-auto">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                     <thead className='text-sm '>
                         <tr className='rounded-sm'>
                             <th>#</th>
                             <td>Name</td>
-                            <td>Passport</td>
-                            <td>Civil ID</td>
+                            <td>Passport/ ID</td>
+                            {/* <td>Civil ID</td> */}
                             <td className='hidden md:block'>Visa Type</td>
                             <td >Phone</td>
-                            <td className='hidden md:block'>Start Date</td>
-                            <td >Expire</td>
+                            <td >Working Place</td>
+                            <td >Start / Expire </td>
+                            {/* <td >Expire</td> */}
                             <td>Visa Remaining</td>
 
                         </tr>
@@ -75,17 +76,37 @@ function Home() {
 
                         {
                             peoples.map((person, index) => <tr key={person._id} className={`${dateCaculator(person.expire) > 0 ? 'bg-red-300' : 'bg-green-300'} font-bold rounded-sm gap-5 border-solid border-2 border-indigo-100`} >
-                                <td>{index+1}</td>
+                                <td>{index + 1}</td>
                                 <td>
                                     <span className='font-bold text-xl'> {person.name}</span><br />
                                     <span className='text-slate-500'> {person.nationality}</span>
                                 </td>
-                                <td>{person.passport}</td>
-                                <td>{person.sivilId}</td>
+                                <td>
+                                    {
+                                        person.passport ? <>
+                                            <span className='font-bold text-sm'> {person.passport}</span><br />
+                                            <span className='text-slate-500'> {person.sivilId}</span>
+                                        </> : <span className='text-slate-500 font-bold text-sm'> {person.sivilId}</span>
+                                    }
+
+                                </td>
+                                {/* <td></td> */}
                                 <td className='hidden md:block'>{person?.visa}</td>
                                 <td >{person.phone}</td>
-                                <td className='hidden md:block'>{person.startDate}</td>
-                                <td >{person.expire}</td>
+                                <td >{person.workigPlace}</td>
+                                <td >
+                                    {
+                                        person.startDate ? <>
+                                            <span className='font-bold'> {person.startDate}</span><br />
+                                            <span className='font-bold'> {person.expire}</span>
+                                        </>
+                                            :
+                                            <span className='font-bold'> {person.expire}</span>
+
+                                    }
+
+                                </td>
+                                {/* <td >{person.expire}</td> */}
                                 <td className=''>
                                     <div className={`badge w-full text-xl p-4 font-bold ${dateCaculator(person.expire) > 0 ? 'badge-error' : 'badge-success'} gap-2`}>
                                         {dateCaculator(person.expire)}
