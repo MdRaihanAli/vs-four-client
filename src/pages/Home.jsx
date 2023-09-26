@@ -6,7 +6,6 @@ function Home() {
 
     const allPeople = useLoaderData()
 
-
     //  for expire date shorting 
     const ascendingSortedData = allPeople.slice().sort((a, b) => {
         const dateA = new Date(a.expire);
@@ -63,9 +62,9 @@ function Home() {
                             <td>Name</td>
                             <td>Passport/ ID</td>
                             {/* <td>Civil ID</td> */}
-                            <td className='hidden md:block'>Visa Type</td>
-                            <td >Phone</td>
-                            <td >Working Place</td>
+                            <td className='hidden md:inline'>Visa Type</td>
+                            <td className='hidden md:inline' >Phone</td>
+                            <td className='hidden md:inline' >Working Place</td>
                             <td >Start / Expire </td>
                             {/* <td >Expire</td> */}
                             <td>Visa Remaining</td>
@@ -90,10 +89,9 @@ function Home() {
                                     }
 
                                 </td>
-                                {/* <td></td> */}
                                 <td className='hidden md:block'>{person?.visa}</td>
-                                <td >{person.phone}</td>
-                                <td >{person.workigPlace}</td>
+                                <td className='hidden md:inline' >{person.phone}</td>
+                                <td className='hidden md:inline' >{person.workigPlace}</td>
                                 <td >
                                     {
                                         person.startDate ? <>
@@ -112,8 +110,10 @@ function Home() {
                                         {dateCaculator(person.expire)}
                                     </div>
                                 </td>
-                                <td className='hidden mt-2 lg:block'>
-                                    <button onClick={() => handelPeopleDelete(person._id)} className="btn btn-xs">DELETE</button>
+                                <td >
+                                    <span className='hidden mt-2 lg:inline'>
+                                        <button onClick={() => handelPeopleDelete(person._id)} className="btn btn-xs">DELETE</button>
+                                    </span>
                                     <Link to={`/editPeople/${person._id}`}> <button onClick={() => handelEdit(person._id)} className="btn btn-xs">UPDADE</button></Link>
                                 </td>
                                 <td>
