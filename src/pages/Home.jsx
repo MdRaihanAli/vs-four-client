@@ -62,9 +62,9 @@ function Home() {
                             <td>Name</td>
                             <td>Passport/ ID</td>
                             {/* <td>Civil ID</td> */}
-                            <td className='hidden md:inline'>Visa Type</td>
-                            <td className='hidden md:inline' >Phone</td>
-                            <td className='hidden md:inline' >Working Place</td>
+                            <td className='hidden lg:inline'>Visa Type</td>
+                            <td className='hidden lg:inline' >Phone</td>
+                            <td className='hidden lg:inline' >Working Place</td>
                             <td >Start / Expire </td>
                             {/* <td >Expire</td> */}
                             <td>Visa Remaining</td>
@@ -89,9 +89,9 @@ function Home() {
                                     }
 
                                 </td>
-                                <td className='hidden md:block'>{person?.visa}</td>
-                                <td className='hidden md:inline' >{person.phone}</td>
-                                <td className='hidden md:inline' >{person.workigPlace}</td>
+                                <td className='hidden lg:block'>{person?.visa}</td>
+                                <td className='hidden lg:inline' >{person.phone}</td>
+                                <td className='hidden lg:inline' >{person.workigPlace}</td>
                                 <td >
                                     {
                                         person.startDate ? <>
@@ -110,9 +110,9 @@ function Home() {
                                         {dateCaculator(person.expire)}
                                     </div>
                                 </td>
-                                <td >
-                                    <span className='hidden mt-2 lg:inline'>
-                                        <button onClick={() => handelPeopleDelete(person._id)} className="btn btn-xs">DELETE</button>
+                                <td className='flex' >
+                                    <span >
+                                        <button onClick={() => handelPeopleDelete(person._id)} className="btn btn-xs mr-1">DELETE</button>
                                     </span>
                                     <Link to={`/editPeople/${person._id}`}> <button onClick={() => handelEdit(person._id)} className="btn btn-xs">UPDADE</button></Link>
                                 </td>

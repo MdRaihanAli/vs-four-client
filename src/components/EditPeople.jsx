@@ -55,7 +55,7 @@ function EditPeople() {
                         <h1 className="text-3xl font-bold text-center mt-2">Edit information!</h1>
                         <form onSubmit={handelUpdate} className="card-body">
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Name</span>
@@ -70,7 +70,7 @@ function EditPeople() {
                                 </div>
                             </div>
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Passport Number</span>
@@ -85,7 +85,7 @@ function EditPeople() {
                                 </div>
                             </div>
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Nationality</span>
@@ -100,7 +100,7 @@ function EditPeople() {
                                 </div>
                             </div>
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Working Place</span>
@@ -118,7 +118,7 @@ function EditPeople() {
                                 </div>
                             </div>
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
                                 <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text font-bold">Start Date</span>
@@ -133,7 +133,7 @@ function EditPeople() {
                                 </div>
                             </div>
 
-                            <div className='md:flex gap-2'>
+                            <div className='flex gap-2'>
 
                                 <div className="form-control mt-6 w-full">
                                     <div className='flex justify-end'>
