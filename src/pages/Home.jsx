@@ -114,7 +114,7 @@ function Home() {
                                     <span  >
                                         <button onClick={() => handelPeopleDelete(person._id)} className="btn btn-xs w-full  md:w-[48%] ">DELETE</button>
                                     </span>
-                                    <Link to={`/editPeople/${person._id}`}> <button onClick={() => handelEdit(person._id)} className="btn w-full  md:w-[48%] mt-1 btn-xs">UPDADE</button></Link>
+                                    <Link to={`/editPeople/${person._id}`}> <button onClick={() => handelEdit(person._id)} className="btn w-full  md:w-[48%] btn-xs">UPDADE</button></Link>
                                 </td>
                                 
                             </tr>)
