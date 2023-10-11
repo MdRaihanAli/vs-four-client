@@ -13,18 +13,18 @@ function EditPeople() {
         const form = event.target;
 
         const name = form.name.value;
-        const phone = form.phone.value;
-        const passport = form.passport.value;
-        const sivilId = form.sivilId.value;
-        const nationality = form.nationality.value;
-        const occupation = form.occupation.value;
-        const visa = form.visa.value;
-        const startDate = form.startDate.value;
+        // const phone = form.phone.value;
+        // const passport = form.passport.value;
+        // const sivilId = form.sivilId.value;
+        // const nationality = form.nationality.value;
+        // const occupation = form.occupation.value;
+        // const visa = form.visa.value;
+        // const startDate = form.startDate.value;
         const expire = form.expire.value;
         const workigPlace = form.workigPlace.value;
 
-        const user = { name, phone, passport, sivilId, nationality, occupation, visa, startDate, expire, workigPlace }
-
+        const user = {name, expire, workigPlace }
+        // name, phone, passport, sivilId, nationality, occupation, visa, startDate,
         // console.log(_id);
 
         fetch(`https://vs-four-server-production.up.railway.app/updatePeople/${_id}`, {
@@ -62,15 +62,15 @@ function EditPeople() {
                                     </label>
                                     <input type="text" placeholder="Name" defaultValue={name} name='name' className="input input-bordered" />
                                 </div>
-                                <div className="form-control">
+                                {/* <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Phone</span>
                                     </label>
                                     <input type="number" placeholder="Phone Number" defaultValue={phone} name='phone' className="input input-bordered" />
-                                </div>
+                                </div> */}
                             </div>
 
-                            <div className='flex gap-2'>
+                            {/* <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Passport Number</span>
@@ -83,9 +83,9 @@ function EditPeople() {
                                     </label>
                                     <input type="text" placeholder="Civil ID" defaultValue={sivilId} name='sivilId' className="input input-bordered" />
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div className='flex gap-2'>
+                            {/* <div className='flex gap-2'>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Nationality</span>
@@ -98,7 +98,7 @@ function EditPeople() {
                                     </label>
                                     <input type="text" placeholder="Occupation" defaultValue={occupation} name='occupation' className="input input-bordered" />
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className='flex gap-2'>
                                 <div className="form-control">
@@ -107,7 +107,7 @@ function EditPeople() {
                                     </label>
                                     <input type="text" defaultValue={workigPlace} name='workigPlace' placeholder="Working Place" className="input input-bordered" />
                                 </div>
-                                <div className="form-control">
+                                {/* <div className="form-control">
                                     <label className="label">
                                         <span className="label-text font-bold">Visa type</span>
                                     </label>
@@ -115,16 +115,16 @@ function EditPeople() {
                                         <option value="tourist">Tourist</option>
                                         <option value="work permit">Work Permit </option>
                                     </select>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className='flex gap-2'>
-                                <div className="form-control w-full">
+                                {/* <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text font-bold">Start Date</span>
                                     </label>
                                     <input type="date" defaultValue={startDate} name='startDate' className="input input-bordered" />
-                                </div>
+                                </div> */}
                                 <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text font-bold">Expire</span>

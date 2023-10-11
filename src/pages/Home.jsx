@@ -59,15 +59,15 @@ function Home() {
                     <thead className='text-sm '>
                         <tr className='rounded-sm'>
                             <th>#</th>
-                            <td>Name</td>
-                            <td>Passport/ ID</td>
+                            <th>Name</th>
+                            <th>Passport/ ID</th>
                             {/* <td>Civil ID</td> */}
-                            <td className='hidden lg:inline'>Visa Type</td>
-                            <td className='hidden lg:inline' >Phone</td>
-                            <td className='hidden lg:inline' >Working Place</td>
-                            <td >Start / Expire </td>
+                            <th className='hidden lg:inline-block'>Visa Type</th>
+                            {/* <th className='hidden lg:inline-block' >Phone</th> */}
+                            <th className='hidden lg:inline-block' >Working Place</th>
+                            <th >Start / Expire </th>
                             {/* <td >Expire</td> */}
-                            <td>Visa Remaining</td>
+                            <th>Visa Remaining</th>
 
                         </tr>
                     </thead>
@@ -89,9 +89,9 @@ function Home() {
                                     }
 
                                 </td>
-                                <td className='hidden lg:block'>{person?.visa}</td>
-                                <td className='hidden lg:inline' >{person.phone}</td>
-                                <td className='hidden lg:inline' >{person.workigPlace}</td>
+                                <td className='hidden lg:inline-block'>{person?.visa}</td>
+                                {/* <td className='hidden lg:inline-block' >{person?.phone || '0'}</td> */}
+                                <td className='hidden lg:inline-block mt-2 text-end' >{person?.workigPlace}</td>
                                 <td >
                                     {
                                         person.startDate ? <>
